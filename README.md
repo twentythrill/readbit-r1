@@ -11,12 +11,23 @@
 [![Kotlin](https://img.shields.io/badge/Language-Kotlin_2.0-purple.svg)](https://kotlinlang.org)
 [![Target SDK](https://img.shields.io/badge/Target_SDK-35_(Android_15)-orange.svg)](https://developer.android.com/about/versions/15)
 
+</div>
+
+> [!CAUTION]
+> **IMPORTANT DISCLAIMER & HARDWARE REQUIREMENT**
+> In order to install and run Readbit R1 on a Rabbit R1, your device **must be rooted**. 
+> 
+> The author does **NOT** recommend rooting your Rabbit R1 device and assumes **NO responsibility or liability** for any broken, bricked, or non-functional devices, data loss, or voided warranties. Proceed entirely at your own risk!
+
 ---
 
 ### 🎬 Video Demo
 
-<video src="video-demo.mp4" controls width="100%" style="border-radius: 10px; max-height: 480px;"></video>
-
+<div align="center">
+  <video src="https://raw.githubusercontent.com/twentythrill/readbit-r1/main/video-demo.mp4" controls="controls" muted="muted" style="max-width: 100%; height: auto; border-radius: 10px;"></video>
+  
+  <p><i>If the inline video player does not load in your browser, click below to play or download:</i><br>
+  <b><a href="https://raw.githubusercontent.com/twentythrill/readbit-r1/main/video-demo.mp4">▶️ Watch / Download Demo Video (video-demo.mp4)</a></b></p>
 </div>
 
 ---
@@ -71,6 +82,7 @@ Designed specifically for single-handed hardware interaction on the Rabbit R1:
 - **Build Tool**: Gradle 8.10 (Kotlin DSL)
 - **Minimum SDK**: API 26 (Android 8.0)
 - **Target SDK**: API 35 (Android 15)
+- **Device Requirement**: Rooted Rabbit R1 or compatible Android device.
 - **Architecture**: Single-Activity, Custom Canvas Views (`OrpWordView`), RecyclerView Chunk Adapter (`PreviewAdapter`), Asynchronous Background Processing (`Executors`).
 
 ---
@@ -109,10 +121,11 @@ readbit-r1/
 ### Prerequisites
 - JDK 17 or higher.
 - Android SDK with API level 35 installed.
+- Rooted Rabbit R1 device with ADB enabled.
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/readbit-r1.git
+git clone https://github.com/twentythrill/readbit-r1.git
 cd readbit-r1
 ```
 
@@ -123,7 +136,7 @@ cd readbit-r1
 *The compiled APK will be output to: `app/build/outputs/apk/debug/app-debug.apk`*
 
 ### 3. Install on Device via ADB
-Connect your Rabbit R1 or Android device via USB with ADB enabled:
+Connect your rooted Rabbit R1 via USB with ADB enabled:
 ```bash
 adb install app/build/outputs/apk/debug/app-debug.apk
 ```

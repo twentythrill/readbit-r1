@@ -20,10 +20,10 @@
 </div>
 
 > [!CAUTION]
-> **IMPORTANT DISCLAIMER & HARDWARE REQUIREMENT**
-> In order to install and run Readbit R1 on a Rabbit R1, your device **must be rooted**. 
+> **IMPORTANT DISCLAIMER**
+> In order to install and run Readbit R1 on a Rabbit R1, your device **must be rooted** and running any andorid custom rom.
 > 
-> The author does **NOT** recommend rooting your Rabbit R1 device and assumes **NO responsibility or liability** for any broken, bricked, or non-functional devices, data loss, or voided warranties. Proceed entirely at your own risk!
+> The author does **NOT** recommend rooting your Rabbit R1 device and assumes **NO responsibility or liability** for any broken, bricked, or non-functional devices, data loss, or voided warranties.
 
 ---
 

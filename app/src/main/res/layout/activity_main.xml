@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_root">
+
+    <LinearLayout
+        android:id="@+id/libraryScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginEnd="12dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/readbit_logo" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/space_grotesk_regular"
+                    android:text="@string/library_title"
+                    android:textColor="@color/rb_text"
+                    android:textSize="32sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/library_subtitle"
+                    android:textColor="@color/rb_muted"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/addBookButton"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:text="+"
+                android:textSize="24sp"
+                app:backgroundTint="@color/rb_accent"
+                app:cornerRadius="20dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/libraryEmptyTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:gravity="center"
+            android:text="@string/empty_library"
+            android:textColor="@color/rb_text"
+            android:textSize="22sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/libraryEmptyHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/empty_library_hint"
+            android:textColor="@color/rb_muted"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/libraryRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:paddingBottom="24dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/previewScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="6dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/searchButton"
+                        style="@style/Widget.MaterialComponents.Button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:contentDescription="@string/search"
+                        android:insetLeft="0dp"
+                        android:insetRight="0dp"
+                        android:minWidth="0dp"
+                        android:padding="0dp"
+                        app:backgroundTint="@color/rb_surface_alt"
+                        app:cornerRadius="20dp"
+                        app:icon="@drawable/ic_search_minimal"
+                        app:iconGravity="textTop"
+                        app:iconPadding="0dp"
+                        app:iconTint="@color/rb_text" />
+
+                    <TextView
+                        android:id="@+id/previewBookTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:fadingEdge="none"
+                        android:fontFamily="@font/space_grotesk_regular"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:scrollbars="none"
+                        android:textColor="@color/rb_text"
+                        android:textSize="13sp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/bookmarkButton"
+                        style="@style/Widget.MaterialComponents.Button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:contentDescription="@string/bookmark"
+                        android:insetLeft="0dp"
+                        android:insetRight="0dp"
+                        android:minWidth="0dp"
+                        android:padding="0dp"
+                        app:backgroundTint="@color/rb_surface_alt"
+                        app:cornerRadius="20dp"
+                        app:icon="@drawable/ic_bookmark_minimal"
+                        app:iconGravity="textTop"
+                        app:iconPadding="0dp"
+                        app:iconTint="@color/rb_accent" />
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/previewProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:layout_marginTop="10dp"
+                    android:max="1000"
+                    android:minHeight="6dp"
+                    android:progressTint="@color/rb_accent"
+                    android:progressBackgroundTint="@color/rb_surface_alt" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/previewSelectedWord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/space_grotesk_regular"
+                android:gravity="center"
+                android:textColor="@color/rb_text"
+                android:textSize="30sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/previewRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="14dp"
+                android:layout_weight="1"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:paddingBottom="4dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="14dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/backButton"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="56dp"
+                android:layout_height="52dp"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="@string/back"
+                android:insetLeft="0dp"
+                android:insetRight="0dp"
+                android:minWidth="0dp"
+                app:icon="@drawable/ic_back_minimal"
+                app:iconGravity="textStart"
+                app:iconTint="@color/rb_text"
+                app:cornerRadius="18dp"
+                app:strokeColor="@color/rb_line" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/speedButton"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_weight="1"
+                android:text="@string/speed"
+                android:textColor="@color/rb_accent"
+                app:backgroundTint="@color/rb_surface_alt"
+                app:cornerRadius="18dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/playButton"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="56dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="8dp"
+                android:contentDescription="@string/play"
+                android:gravity="center"
+                android:insetLeft="0dp"
+                android:insetRight="0dp"
+                android:minWidth="0dp"
+                android:padding="0dp"
+                app:backgroundTint="@color/rb_surface_alt"
+                app:cornerRadius="18dp"
+                app:icon="@drawable/ic_play_minimal"
+                app:iconGravity="textTop"
+                app:iconPadding="0dp"
+                app:iconTint="@color/rb_accent" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/previewLoadingOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/rb_overlay"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="24dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:id="@+id/loadingIndicator"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:indeterminateTint="@color/rb_accent" />
+
+            <TextView
+                android:id="@+id/loadingLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:fontFamily="@font/space_grotesk_regular"
+                android:gravity="center"
+                android:text="@string/loading_book"
+                android:textColor="@color/rb_text"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/loadingDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="@string/loading_book_detail"
+                android:textColor="@color/rb_muted"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/rsvpScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp"
+        android:visibility="gone">
+
+        <View
+            android:id="@+id/rsvpTopGuide"
+            android:layout_width="220dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="54dp"
+            android:background="@color/rb_line" />
+
+        <View
+            android:id="@+id/rsvpBottomGuide"
+            android:layout_width="220dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="54dp"
+            android:background="@color/rb_line" />
+
+        <View
+            android:id="@+id/orpLineTop"
+            android:layout_width="2dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="58dp"
+            android:background="@color/rb_accent" />
+
+        <View
+            android:id="@+id/orpLineBottom"
+            android:layout_width="2dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="58dp"
+            android:background="@color/rb_accent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/rsvpPlayButton"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="112dp"
+            android:contentDescription="@string/play"
+            android:gravity="center"
+            android:minWidth="0dp"
+            android:padding="0dp"
+            android:visibility="gone"
+            app:backgroundTint="@color/rb_accent"
+            app:cornerRadius="26dp"
+            app:icon="@drawable/ic_play_minimal"
+            app:iconGravity="textTop"
+            app:iconPadding="0dp"
+            app:iconTint="@color/rb_surface" />
+
+        <com.readbit.r1.OrpWordView
+            android:id="@+id/rsvpWord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:minHeight="108dp" />
+
+        <TextView
+            android:id="@+id/rsvpStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:text="@string/rsvp_hint"
+            android:textColor="@color/rb_muted"
+            android:textSize="13sp" />
+    </FrameLayout>
+
+</FrameLayout>

@@ -1,0 +1,11 @@
+<resources>
+    <color name="rb_bg">#F4EFE5</color>
+    <color name="rb_surface">#FFF9EE</color>
+    <color name="rb_surface_alt">#E7DCCA</color>
+    <color name="rb_text">#181512</color>
+    <color name="rb_muted">#7B705F</color>
+    <color name="rb_accent">#CE3D24</color>
+    <color name="rb_accent_soft">#F7C2B7</color>
+    <color name="rb_line">#C7B7A2</color>
+    <color name="rb_overlay">#D9F4EFE5</color>
+</resources>

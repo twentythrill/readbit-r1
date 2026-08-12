@@ -11,6 +11,12 @@
 [![Kotlin](https://img.shields.io/badge/Language-Kotlin_2.0-purple.svg)](https://kotlinlang.org)
 [![Target SDK](https://img.shields.io/badge/Target_SDK-35_(Android_15)-orange.svg)](https://developer.android.com/about/versions/15)
 
+---
+
+### 🎬 Demo Video
+
+<img src="video-demo.gif" alt="Readbit R1 Video Demo" width="480" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
+
 </div>
 
 > [!CAUTION]
@@ -18,17 +24,6 @@
 > In order to install and run Readbit R1 on a Rabbit R1, your device **must be rooted**. 
 > 
 > The author does **NOT** recommend rooting your Rabbit R1 device and assumes **NO responsibility or liability** for any broken, bricked, or non-functional devices, data loss, or voided warranties. Proceed entirely at your own risk!
-
----
-
-### 🎬 Video Demo
-
-<div align="center">
-  <video src="https://raw.githubusercontent.com/twentythrill/readbit-r1/main/video-demo.mp4" controls="controls" muted="muted" style="max-width: 100%; height: auto; border-radius: 10px;"></video>
-  
-  <p><i>If the inline video player does not load in your browser, click below to play or download:</i><br>
-  <b><a href="https://raw.githubusercontent.com/twentythrill/readbit-r1/main/video-demo.mp4">▶️ Watch / Download Demo Video (video-demo.mp4)</a></b></p>
-</div>
 
 ---
 
@@ -91,7 +86,8 @@ Designed specifically for single-handed hardware interaction on the Rabbit R1:
 
 ```text
 readbit-r1/
-├── video-demo.mp4                       # Project Demonstration Video
+├── video-demo.mp4                       # Source Demonstration Video
+├── video-demo.gif                       # Inline Streaming Animated Demo
 ├── app/
 │   ├── src/main/
 │   │   ├── java/com/readbit/r1/

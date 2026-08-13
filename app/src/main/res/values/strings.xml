@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">readbit</string>
+    <string name="library_title">readbit</string>
+    <string name="library_subtitle">Offline RSVP reader for Rabbit R1</string>
+    <string name="add_book">Add File</string>
+    <string name="empty_library">No books yet</string>
+    <string name="empty_library_hint">Import an EPUB, PDF, TXT, HTML, or Markdown file to start reading.</string>
+    <string name="preview_title">Preview</string>
+    <string name="back">Back</string>
+    <string name="play">Play</string>
+    <string name="speed">Speed</string>
+    <string name="bookmark">Bookmark</string>
+    <string name="search">Search</string>
+    <string name="start_here">Start here</string>
+    <string name="unsupported_book">This file format is not supported yet.</string>
+    <string name="pdf_requires_android_15">PDF text extraction needs Android 15 or newer on the device.</string>
+    <string name="loading_book">Preparing book…</string>
+    <string name="loading_book_detail">Parsing text and building the reading layout.</string>
+    <string name="opening_book">Opening book…</string>
+    <string name="opening_book_detail">Loading the saved reading layout.</string>
+    <string name="searching_book">Searching…</string>
+    <string name="searching_book_detail">Looking through the book.</string>
+    <string name="rsvp_hint">Volume Up to play/resume. Volume Down to pause or step back. Double-tap to exit.</string>
+    <string name="wpm_format">%1$d WPM</string>
+    <string name="reading_complete">End of book</string>
+    <string name="import_failed">Import failed.</string>
+    <string name="parse_failed">Could not read this file.</string>
+    <string name="bookmark_saved">Bookmark saved</string>
+    <string name="search_no_results">No matching word found.</string>
+    <string name="no_bookmarks">No bookmarks yet.</string>
+    <string name="delete_book_title">Delete book?</string>
+    <string name="delete_book_message">Remove "%1$s" from your library?</string>
+    <string name="delete_bookmark_title">Delete bookmark?</string>
+    <string name="delete_bookmark_message">Remove this bookmark?</string>
+</resources>

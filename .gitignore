@@ -1,0 +1,38 @@
+# Gradle build outputs & cache
+.gradle/
+.gradle-dist/
+.gradle-user-home/
+build/
+app/build/
+.kotlin/
+
+# Local configuration & environment
+local.properties
+
+# IDE & Editor files
+.idea/
+*.iml
+.vscode/
+*.swp
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Android build outputs & keys
+*.apk
+*.aab
+*.dex
+*.class
+*.keystore
+*.jks
+*.pepk
+
+# Log files
+*.log
